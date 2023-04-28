@@ -1,10 +1,12 @@
 import { useState } from "react";
-import "./App.css";
-import eslintLogo from "./assets/esLint.png";
-import reactLogo from "./assets/react.svg";
+import eslintLogo from "../assets/images/esLint.png";
+import reactLogo from "../assets/images/react.svg";
+import useTitle from "../hooks/useTitle";
+import "../styles/home.css";
 
-function App() {
+function Home() {
   const [count, setCount] = useState(0);
+  useTitle("Home - Vite + React + ESLint");
 
   return (
     <>
@@ -25,7 +27,7 @@ function App() {
           count is {count}
         </button>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          Edit <code>src/pages/Home.jsx</code> and save to test HMR
         </p>
       </div>
       <p className="read-the-docs">
@@ -35,4 +37,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;
